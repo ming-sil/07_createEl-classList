@@ -42,16 +42,28 @@
         // =>돔에 엘리먼트를 제작할 수 있음
         // =>document.createElement('엘리먼트 명');
 
+        const wrapEl = document.querySelector('.wrap');
         const h1El = document.createElement('h1');
+        const boxEl_2 = document.querySelector('.box:nth-child(2)')
+
         // debugger
         // =>코드를 읽는 도중 디버거를 만나면 코드가 멈추고 디버깅을 할 수 있음
-        console.log(h1El);
+      
+        // console.log(h1El);
         h1El.innerHTML = "H 태그를 만들었습니다.";
         // =>innerHTML: 특정 태그 안쪽으로 글자를 작성할 수 있음
         // =>innerText: innerHTML과 동일하게 태그안쪽에 글자 작성
-        console.log(h1El);
+        // console.log(h1El);
 
-    </script>
+        wrapEl.appendChild(h1El)
+        // =>부모선택자.appendChild(자식선택자)
+        // =>부모의 마지막 자식으로 추가
+
+        wrapEl.removeChild(boxEl_2)
+        // =>부모선택자.removeChild(자식선택자)
+        // =>부모 안쪽에있는 자식을 삭제할 수 있음
+
+</script>
 
 </body>
 </html>
