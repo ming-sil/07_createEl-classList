@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+   
+   <style>
+
+        *{margin: 0; padding: 0;}
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: mediumturquoise;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active{
+            background-color: salmon;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+
+        const boxEl_1 = document.querySelector('.box:nth-child(1)');
+        const boxEl_2 = document.querySelector('.box:nth-child(2)');
+
+        // boxEl_1.classList.add('active');
+        // // =>선택자.classList.add(클래스명);
+        // // =>선택자에 원하는 클래스를 추가시킬 수 있음
+
+        // boxEl_2.classList.remove('box');
+        // // =>선택자.classList.remove(클래스명);
+        // // =>선택자에 원하는 클래스를  삭제시킬 수 있음
+
+        boxEl_1.classList.toggle('active');
+        // =>선택자.classList.toggle(클래스명);
+        // =>선택자에 원하는 클래스를 추가혹은 삭제시킬 수 있음(add+remove)
+        // =>클래스가 없으면 추가, 있으면 삭제
+
+    </script>
+    
+</body>
+</html>
