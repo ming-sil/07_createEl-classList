@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+   
+   <style>
+
+        *{margin: 0; padding: 0;}
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: mediumturquoise;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active{
+            background-color: salmon;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <!-- 문제2 전체 자식들에 ative 클래스 적용하기 -->
+
+    <script>
+
+        const boxEl = document.querySelectorAll('.box');
+
+        for(let i = 0; i < boxEl.length; i++){
+            boxEl[i].classList.add('active');
+        }
+
+
+    </script>
+    
+</body>
+</html>
