@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: salmon;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+
+        // *createElement
+        // =>돔에 엘리먼트를 제작할 수 있음
+        // =>document.createElement('엘리먼트 명');
+
+        const h1El = document.createElement('h1');
+        // debugger
+        // =>코드를 읽는 도중 디버거를 만나면 코드가 멈추고 디버깅을 할 수 있음
+        console.log(h1El);
+        h1El.innerHTML = "H 태그를 만들었습니다.";
+        // =>innerHTML: 특정 태그 안쪽으로 글자를 작성할 수 있음
+        // =>innerText: innerHTML과 동일하게 태그안쪽에 글자 작성
+        console.log(h1El);
+
+    </script>
+
+</body>
+</html>
